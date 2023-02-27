@@ -32,19 +32,21 @@ for (let i = 0; i < rand.length; i++) {
 
 done.addEventListener("click", check);
 function check() {
-  for (let i = 0; i < rand.length; i++) {
-    if (answer.value == rand[i]) {
-      const blurry = document.getElementById("blur-" + i);
-      blurry.classList.remove("blur");
-      found = true;
+  if (attempts.innerHTML != 0) {
+    for (let i = 0; i < rand.length; i++) {
+      if (answer.value == rand[i]) {
+        const blurry = document.getElementById("blur-" + i);
+        blurry.classList.remove("blur");
+        found = true;
+      }
     }
-  }
-  if (found == false) {
-    if (attempts.innerHTML != 0) {
-      attempts.innerHTML -= 1;
-    } else {
-      message.innerHTML = "You Lost :( ,  try again.";
+    if (found == false) {
+      if (attempts.innerHTML != 1) {
+        attempts.innerHTML -= 1;
+      } else {
+        message.innerHTML = "You Lost :( ,  try again.";
+      }
     }
+    found = false;
   }
-  found = false;
 }
