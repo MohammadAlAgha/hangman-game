@@ -21,8 +21,8 @@ const words = [
 ];
 
 {
-  win = false;
-  found = false;
+  const found = false;
+  const steps = rand.length;
 }
 
 let rand = words[Math.floor(Math.random() * words.length)];
@@ -38,8 +38,10 @@ function check() {
         const blurry = document.getElementById("blur-" + i);
         blurry.classList.remove("blur");
         found = true;
+        steps -= 1;
       }
     }
+
     if (found == false) {
       if (attempts.innerHTML != 1) {
         attempts.innerHTML -= 1;
