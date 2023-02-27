@@ -12,16 +12,34 @@
 
 body {
   font-family: all;
+  background-color: rgb(204, 204, 204);
 }
 
 .header {
+  height: 30vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
 .page {
   height: 100vh;
-  width: 100vw;
+  margin: 0 70px;
+}
+
+.attempts {
+  font-size: 60px;
+}
+
+input {
+  width: 20%;
+  padding: 5px;
+  border: rgb(112, 112, 112) 3px solid;
+}
+
+.try {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
 }
