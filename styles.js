@@ -1,5 +1,6 @@
 const answer = document.getElementById("answer");
 const done = document.getElementById("done");
+const blank = document.getElementById("word");
 
 const words = [
   "table",
@@ -18,7 +19,14 @@ const words = [
 ];
 
 let rand = words[Math.floor(Math.random() * words.length)];
+console.log(rand);
+for (let i = 0; i < rand.length; i++) {
+  blank.innerHTML += ` <div class="dash"></div> `;
+}
+
+done.addEventListener("click", check);
+
+function check() {}
 
 {
-  /* <div class="dash"></div> */
 }
