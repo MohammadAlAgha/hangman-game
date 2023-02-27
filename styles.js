@@ -2,6 +2,7 @@ const answer = document.getElementById("answer");
 const done = document.getElementById("done");
 const blank = document.getElementById("word");
 const attempts = document.getElementById("try");
+const message = document.getElementById("message");
 
 const words = [
   "table",
@@ -39,7 +40,11 @@ function check() {
     }
   }
   if (found == false) {
-    attempts.innerHTML -= 1;
+    if (attempts.innerHTML != 0) {
+      attempts.innerHTML -= 1;
+    } else {
+      message.innerHTML = "You Lost :( ,  try again.";
+    }
   }
   found = false;
 }
