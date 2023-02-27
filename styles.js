@@ -1,4 +1,5 @@
 const answer = document.getElementById("answer");
+const done = document.getElementById("done");
 
 const words = [
   "table",
@@ -17,3 +18,7 @@ const words = [
 ];
 
 let rand = words[Math.floor(Math.random() * words.length)];
+
+{
+  /* <div class="dash"></div> */
+}

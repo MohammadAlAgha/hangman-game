@@ -34,12 +34,37 @@ body {
 
 input {
   width: 20%;
-  padding: 5px;
+  padding: 10px;
   border: rgb(112, 112, 112) 3px solid;
+  border-radius: 20px;
 }
 
 .try {
   display: flex;
   justify-content: center;
   font-size: 40px;
+}
+
+.dash {
+  height: fit-content;
+  width: 100px;
+  border-bottom: 3px solid black;
+}
+
+.word {
+  height: 40%;
+  width: 100%;
+  padding: 10px;
+  border: rgb(112, 112, 112) 3px solid;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+.done {
+  height: fit-content;
+  width: 10%;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgb(138, 138, 138);
+  color: aliceblue;
 }
