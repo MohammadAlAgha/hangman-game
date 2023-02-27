@@ -20,35 +20,43 @@ const words = [
   "temperature",
 ];
 
-{
-  const found = false;
-  const steps = rand.length;
-}
-
 let rand = words[Math.floor(Math.random() * words.length)];
 for (let i = 0; i < rand.length; i++) {
   blank.innerHTML += `<div class="dash""><div class="blur"  id="blur-${i}">${rand[i]}</div></div>`;
 }
 
+const rules = {
+  found: false,
+  steps: rand.length,
+  game: true,
+};
 done.addEventListener("click", check);
 function check() {
-  if (attempts.innerHTML != 0) {
-    for (let i = 0; i < rand.length; i++) {
-      if (answer.value == rand[i]) {
-        const blurry = document.getElementById("blur-" + i);
-        blurry.classList.remove("blur");
-        found = true;
-        steps -= 1;
+  if (rules.game) {
+    console.log("hellooos");
+    if (attempts.innerHTML != 0) {
+      console.log("hiii");
+      for (let i = 0; i < rand.length; i++) {
+        if (answer.value == rand[i]) {
+          const blurry = document.getElementById("blur-" + i);
+          blurry.classList.remove("blur");
+          rules.found = true;
+          rules.steps -= 1;
+        }
       }
-    }
-
-    if (found == false) {
-      if (attempts.innerHTML != 1) {
-        attempts.innerHTML -= 1;
-      } else {
-        message.innerHTML = "You Lost :( ,  try again.";
+      if (rules.steps == 0) {
+        message.innerHTML = "You won!!!";
+        rules.game = false;
       }
+      if (rules.found == false) {
+        if (attempts.innerHTML != 1) {
+          attempts.innerHTML -= 1;
+        } else {
+          message.innerHTML = "You Lost :( ,  try again.";
+          rules.game = false;
+        }
+      }
+      rules.found = false;
     }
-    found = false;
   }
 }
