@@ -19,14 +19,18 @@ const words = [
 ];
 
 let rand = words[Math.floor(Math.random() * words.length)];
-console.log(rand);
 for (let i = 0; i < rand.length; i++) {
-  blank.innerHTML += ` <div class="dash"></div> `;
+  blank.innerHTML += `<div class="dash""><div class="blur"  id="blur-${i}">${rand[i]}</div></div>`;
 }
 
+console.log(blank);
 done.addEventListener("click", check);
-
-function check() {}
-
-{
+function check() {
+  console.log(answer.value);
+  for (let i = 0; i < rand.length; i++) {
+    if (answer.value == rand[i]) {
+      const blurry = document.getElementById("blur-" + i);
+      blurry.classList.remove("blur");
+    }
+  }
 }
