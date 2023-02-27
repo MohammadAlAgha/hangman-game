@@ -10,6 +10,11 @@
   src: url(./assets/print-clearly/print_clearly_tt.ttf);
 }
 
+@font-face {
+  font-family: bold;
+  src: url(./assets/print-clearly/print_bold_tt.ttf);
+}
+
 body {
   font-family: all;
   background-color: rgb(204, 204, 204);
@@ -73,7 +78,7 @@ input {
   width: 10%;
   padding: 10px;
   border-radius: 20px;
-  background-color: rgb(138, 138, 138);
+  background-color: rgb(0, 0, 0);
   color: aliceblue;
 }
 
@@ -86,4 +91,5 @@ input {
   height: 10%;
   width: 100%;
   font-size: 40px;
+  font-family: bold;
 }
