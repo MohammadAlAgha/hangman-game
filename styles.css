@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+@font-face {
+  font-family: all;
+  src: url(./assets/print-clearly/print_clearly_tt.ttf);
+}
+
+body {
+  font-family: all;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+}
