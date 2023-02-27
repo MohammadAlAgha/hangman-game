@@ -32,31 +32,33 @@ const rules = {
 };
 done.addEventListener("click", check);
 function check() {
-  if (rules.game) {
-    console.log("hellooos");
-    if (attempts.innerHTML != 0) {
-      console.log("hiii");
-      for (let i = 0; i < rand.length; i++) {
-        if (answer.value == rand[i]) {
-          const blurry = document.getElementById("blur-" + i);
-          blurry.classList.remove("blur");
-          rules.found = true;
-          rules.steps -= 1;
+  if (answer.value.length == 1) {
+    if (rules.game) {
+      if (attempts.innerHTML != 0) {
+        for (let i = 0; i < rand.length; i++) {
+          if (answer.value == rand[i]) {
+            const blurry = document.getElementById("blur-" + i);
+            blurry.classList.remove("blur");
+            rules.found = true;
+            rules.steps -= 1;
+          }
         }
-      }
-      if (rules.steps == 0) {
-        message.innerHTML = "You won!!!";
-        rules.game = false;
-      }
-      if (rules.found == false) {
-        if (attempts.innerHTML != 1) {
-          attempts.innerHTML -= 1;
-        } else {
-          message.innerHTML = "You Lost :( ,  try again.";
+        if (rules.steps == 0) {
+          message.innerHTML = "You won!!!";
           rules.game = false;
         }
+        if (rules.found == false) {
+          if (attempts.innerHTML != 1) {
+            attempts.innerHTML -= 1;
+          } else {
+            message.innerHTML = "You Lost :( ,  try again.";
+            rules.game = false;
+          }
+        }
+        rules.found = false;
       }
-      rules.found = false;
     }
+  } else {
+    message.innerHTML = "Please enter one letter";
   }
 }
