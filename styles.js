@@ -17,4 +17,3 @@ const words = [
 ];
 
 let rand = words[Math.floor(Math.random() * words.length)];
-console.log(rand);
