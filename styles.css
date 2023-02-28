@@ -83,7 +83,7 @@ input {
 }
 
 .blur {
-  color: aliceblue;
+  display: none;
 }
 
 .message {
