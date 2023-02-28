@@ -29,13 +29,13 @@ const words = [
   "thunder",
   "soccer",
   "tree",
-  "doctionaries",
+  "dictionaries",
 ];
 
 start.addEventListener("click", restart);
 
 function restart() {
-  attempts.innerHTML = 7;
+  attempts.innerHTML = 10;
   message.innerHTML = "";
   blank.innerHTML = "";
   steps = 0;
@@ -49,7 +49,7 @@ function restart() {
     found: false,
     steps: rand.length,
     game: true,
-  };
+  }; //dictionary
   done.addEventListener("click", check);
   function check() {
     if (answer.value.length == 1) {
