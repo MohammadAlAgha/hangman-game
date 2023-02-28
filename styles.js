@@ -18,6 +18,17 @@ const words = [
   "hoodie",
   "laptop",
   "temperature",
+  "restart",
+  "player",
+  "game",
+  "winner",
+  "loser",
+  "start",
+  "rocket",
+  "thunder",
+  "soccer",
+  "tree",
+  "doctionaries",
 ];
 
 let rand = words[Math.floor(Math.random() * words.length)];
