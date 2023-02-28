@@ -18,6 +18,7 @@
 body {
   font-family: all;
   background-color: rgb(204, 204, 204);
+  overflow-y: hidden;
 }
 
 .header {
@@ -89,7 +90,7 @@ input {
 }
 
 .message {
-  margin-top: 40px;
+  margin-top: 20px;
   height: 10%;
   width: 100%;
   font-size: 40px;
@@ -99,5 +100,5 @@ input {
 h1 {
   font-family: bold;
   font-size: 60px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
